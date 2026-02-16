@@ -140,6 +140,10 @@ hands.onResults(onResults);
 // Cámara
 let cameraObj = null;
 
+function calculateDistance(p1, p2) {
+    return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+}
+
 startBtn.addEventListener('click', () => {
     if (!isRunning) {
         cameraObj = new Camera(videoElement, {
